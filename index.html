@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Public Record Trivia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Public Record Trivia</h1>
+        <p class="subtitle">
+          A trivia game based on public records and reputable reporting. Every question includes sources.
+        </p>
+      </header>
+
+      <section class="scorebar">
+        <div class="pill">Score: <span id="score">0</span></div>
+        <div class="pill">Question: <span id="qnum">0</span>/<span id="qtotal">0</span></div>
+        <button id="resetBtn" class="btn btn-ghost" type="button">Reset</button>
+      </section>
+
+      <section class="card" aria-live="polite">
+        <div class="meta">
+          <span id="category" class="tag">Loading…</span>
+        </div>
+
+        <h2 id="prompt" class="prompt">Loading questions…</h2>
+
+        <div id="choices" class="choices"></div>
+
+        <div id="result" class="result hidden">
+          <div class="result-line">
+            <span id="resultBadge" class="badge"></span>
+            <span id="answerText"></span>
+          </div>
+
+          <p id="explain" class="explain"></p>
+
+          <div class="sources">
+            <h3>Sources</h3>
+            <ul id="sourcesList"></ul>
+          </div>
+
+          <button id="nextBtn" class="btn" type="button">Next question</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <details>
+          <summary>Methodology and disclaimer</summary>
+          <p>
+            This site is a trivia game based on public records and reputable reporting.
+            Questions are labeled by type (conviction, court filing, investigation, allegation, etc.).
+            A lawsuit, report, or allegation is not proof of wrongdoing unless a court finding or conviction is cited.
+            Sources are provided for every question so you can verify context.
+          </p>
+        </details>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
